@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Original G8 Android identity, and the prepared mode-zero firmware candidate. -->
+    <usb-device vendor-id="13623" product-id="264" />
+    <usb-device vendor-id="5426" product-id="1818" />
+    <!-- Non-boot HID is an app-open candidate, not proof of a gamepad. Actual input
+         selection uses Android sources and the captured evdev capabilities. -->
+    <usb-device class="3" subclass="0" protocol="0" />
+</resources>

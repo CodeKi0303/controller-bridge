@@ -1,0 +1,5 @@
+Versioned sources for dev.rikka.shizuku:provider:13.1.5
+License: MIT
+Source archive: https://repo.maven.apache.org/maven2/dev/rikka/shizuku/provider/13.1.5/provider-13.1.5-sources.jar
+The published source archive was expanded without modifying source file content.
+Gradle continues to resolve the pinned published Maven artifact; this copy is retained as corresponding source.

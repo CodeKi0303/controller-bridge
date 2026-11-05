@@ -1,0 +1,11 @@
+* text=auto eol=lf
+*.jar binary
+*.png binary
+*.webp binary
+# Preserve retained source and notice bytes for their acquisition digests.
+third_party/sources/** -text -whitespace linguist-vendored
+third_party/adb-crypto/** -text -whitespace linguist-vendored
+third_party/conscrypt/** -text -whitespace linguist-vendored
+app/src/main/cpp/spake2/** -text -whitespace linguist-vendored
+app/src/main/assets/licenses/** -text -whitespace
+LICENSE -text

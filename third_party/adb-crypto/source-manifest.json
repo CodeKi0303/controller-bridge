@@ -1,0 +1,19 @@
+{
+  "pairingReference": {
+    "version": "3.1.1",
+    "commit": "c849886ebc6d48e7b46d967e78a6bb65c90c3b74",
+    "url": "https://github.com/MuntashirAkon/libadb-android",
+    "license": "Apache-2.0 selection from GPL-3.0-or-later OR Apache-2.0",
+    "files": [
+      {
+        "path": "third_party/adb-crypto/upstream-libadb/PairingAuthCtx.java",
+        "sha256": "27c2a8a1a7dc282fa6b48cb45c412ff078ac0dda9ea4c34a546e5578b764587c"
+      },
+      {
+        "path": "third_party/adb-crypto/upstream-libadb/AndroidPubkey.java",
+        "sha256": "6c5a12f4426a4851f875f581ab0b41cb2417a49b3097e958c83d4b6a12815273"
+      }
+    ],
+    "changes": "AdbPairingCrypto uses JCA HKDF/AES-GCM instead of BouncyCastle; AdbPublicKey uses JDK BigInteger/Base64; transport is independently authored TLS-only loopback client."
+  }
+}

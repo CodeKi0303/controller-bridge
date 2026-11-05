@@ -1,0 +1,44 @@
+{
+  "source": "https://github.com/MuntashirAkon/spake2-c",
+  "commit": "0d15933e5ba3e662cb01245a7ac0dc9fca3eac31",
+  "selection": "Pinned submodule of spake2-java 2.2.1; no Java implementation or upstream JNI bundled",
+  "modifications": [
+    "SecureRandom entropy supplied by caller instead of C rand()",
+    "Check name allocations",
+    "Erase context before free",
+    "Remove printf errors; propagate status",
+    "Portable Clang endian definitions for Windows-only host tests"
+  ],
+  "files": [
+    {
+      "path": "app/src/main/cpp/spake2/curve25519_32.h",
+      "sha256": "aab012a97c5425fb88c80bffe8c477e84174e384c434d5c52527084d969b94dd",
+      "upstream_sha256": "aab012a97c5425fb88c80bffe8c477e84174e384c434d5c52527084d969b94dd"
+    },
+    {
+      "path": "app/src/main/cpp/spake2/ed25519.h",
+      "sha256": "d1db94fbafbe2fc25c912b1d7d516d559bc0620529d2427edd1e1510c9d15316",
+      "upstream_sha256": "d1db94fbafbe2fc25c912b1d7d516d559bc0620529d2427edd1e1510c9d15316"
+    },
+    {
+      "path": "app/src/main/cpp/spake2/include/spake2/sha512.h",
+      "sha256": "b28859dbf389e5179d6ce65eedc6018e716b1870d6ac668dd31b2aec00f47e5c",
+      "upstream_sha256": "356863fe1cfaff9295e9316aa4679bbd3233b11d6f606c3cb977f42ca22cb986"
+    },
+    {
+      "path": "app/src/main/cpp/spake2/include/spake2/spake2.h",
+      "sha256": "b0375e20b2a60598bf9a50011bf41aa3f6028b31f42e05d4d9f579673b1b4d3f",
+      "upstream_sha256": "1a7edc0b8e842355d6bf8d635c7d1ba4b02ab43b2fe2a976d705e5b7e688d004"
+    },
+    {
+      "path": "app/src/main/cpp/spake2/sha512.c",
+      "sha256": "49a19a70faea2ed4c7d0099da43da7d43a887749243e4e474512abe982437637",
+      "upstream_sha256": "49a19a70faea2ed4c7d0099da43da7d43a887749243e4e474512abe982437637"
+    },
+    {
+      "path": "app/src/main/cpp/spake2/spake2.c",
+      "sha256": "6bc060c35847c95de5d99e2ec4e1e60f99422ef3d6884b7d9322b5354b9b716f",
+      "upstream_sha256": "acce0f6d6f596de6e328367232d7baf6d8dc6377d3ad5260e165ddb65a03c4dd"
+    }
+  ]
+}

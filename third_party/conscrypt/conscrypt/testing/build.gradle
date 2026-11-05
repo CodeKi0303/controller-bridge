@@ -1,0 +1,28 @@
+plugins {
+    id 'conventions.common'
+    id 'conventions.jvm'
+    alias libs.plugins.shadow
+}
+
+description = 'Conscrypt: Testing'
+
+sourceSets {
+    main {
+        java {
+            srcDirs = ['src/main/java']
+        }
+    }
+}
+
+dependencies {
+    compileOnly project(':conscrypt-constants')
+
+    implementation libs.bouncycastle.apis,
+            libs.bouncycastle.provider,
+            libs.junit
+}
+
+// No public methods here.
+tasks.withType(Javadoc).configureEach {
+    enabled = false
+}

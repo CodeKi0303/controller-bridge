@@ -1,0 +1,6 @@
+Versioned sources/metadata for androidx.collection:collection:1.1.0
+License: Apache-2.0
+Published POM: https://dl.google.com/dl/android/maven2/androidx/collection/collection/1.1.0/collection-1.1.0.pom
+Source archive: https://dl.google.com/dl/android/maven2/androidx/collection/collection/1.1.0/collection-1.1.0-sources.jar
+The source archive was expanded without modifying file content.
+Retained for Controller Bridge corresponding source. Gradle resolves the pinned published Maven artifact.

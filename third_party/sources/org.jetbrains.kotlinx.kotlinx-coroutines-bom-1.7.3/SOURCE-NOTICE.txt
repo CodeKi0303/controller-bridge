@@ -1,0 +1,5 @@
+Versioned sources/metadata for org.jetbrains.kotlinx:kotlinx-coroutines-bom:1.7.3
+License: Apache-2.0
+Published POM: https://repo.maven.apache.org/maven2/org/jetbrains/kotlinx/kotlinx-coroutines-bom/1.7.3/kotlinx-coroutines-bom-1.7.3.pom
+This BOM carries dependency constraints only; no runtime code.
+Retained for Controller Bridge corresponding source. Gradle resolves the pinned published Maven artifact.

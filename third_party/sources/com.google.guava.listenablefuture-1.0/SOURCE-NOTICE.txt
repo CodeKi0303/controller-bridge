@@ -1,0 +1,6 @@
+Versioned sources/metadata for com.google.guava:listenablefuture:1.0
+License: Apache-2.0
+Published POM: https://repo.maven.apache.org/maven2/com/google/guava/listenablefuture/1.0/listenablefuture-1.0.pom
+Source archive: https://repo.maven.apache.org/maven2/com/google/guava/listenablefuture/1.0/listenablefuture-1.0-sources.jar
+The source archive was expanded without modifying file content.
+Retained for Controller Bridge corresponding source. Gradle resolves the pinned published Maven artifact.

@@ -1,0 +1,14 @@
+Pinned AOSP key layouts for independent Sony output interpretation tests.
+
+Commit: 1cdfff555f4a21f71ccc978290e2e212e2f8b168
+
+These files retain their original Apache-2.0 license headers.
+The PS5 fixture requires CONFIG_HID_PLAYSTATION; runtime layout applicability is checked separately.
+
+Vendor_054c_Product_09cc.kl
+Source: https://android.googlesource.com/platform/frameworks/base/+/1cdfff555f4a21f71ccc978290e2e212e2f8b168/data/keyboards/Vendor_054c_Product_09cc.kl
+SHA-256: 5f4882ab69f17282f82546962b3a3d030ad681fb5f775e5723b08ca458435d58
+
+Vendor_054c_Product_0ce6.kl
+Source: https://android.googlesource.com/platform/frameworks/base/+/1cdfff555f4a21f71ccc978290e2e212e2f8b168/data/keyboards/Vendor_054c_Product_0ce6.kl
+SHA-256: 7d706d5af7d55c0294712f86391c9b0c3ce79ab96dff7cc6f6ce27b6ecbbe9dc

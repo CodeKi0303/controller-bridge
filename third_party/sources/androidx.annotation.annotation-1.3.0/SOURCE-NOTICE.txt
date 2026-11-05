@@ -1,0 +1,5 @@
+Versioned sources for androidx.annotation:annotation:1.3.0
+License: Apache-2.0
+Source archive: https://dl.google.com/dl/android/maven2/androidx/annotation/annotation/1.3.0/annotation-1.3.0-sources.jar
+The published source archive was expanded without modifying source file content.
+Gradle continues to resolve the pinned published Maven artifact; this copy is retained as corresponding source.

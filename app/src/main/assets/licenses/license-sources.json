@@ -1,0 +1,32 @@
+[
+  {
+    "file": "GPL-3.0.txt",
+    "url": "https://raw.githubusercontent.com/atar-axis/xpadneo/7213c9a4a67c4f41be4179d1f28602c221a01adb/LICENSES/LICENSE.gpl-3.0.txt",
+    "sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903"
+  },
+  {
+    "file": "Shizuku-API-MIT.txt",
+    "url": "https://raw.githubusercontent.com/RikkaApps/Shizuku-API/master/LICENSE",
+    "sha256": "64870037f294b6f2b75c8ebe77cc0702acb3b64f86b4b0e58bf8558525303686"
+  },
+  {
+    "file": "Apache-2.0.txt",
+    "url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+    "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+  },
+  {
+    "file": "SDL-zlib.txt",
+    "url": "https://raw.githubusercontent.com/libsdl-org/SDL/release-2.30.9/LICENSE.txt",
+    "sha256": "9b9e1764f06701bcf7ce21e942c682d5921ba0900c6fca760321b1c8837a9662"
+  },
+  {
+    "file": "Linux-syscall-note.txt",
+    "url": "https://raw.githubusercontent.com/torvalds/linux/v6.12/LICENSES/exceptions/Linux-syscall-note",
+    "sha256": "8e378ab93586eb55135d3bc119cce787f7324f48394777d00c34fa3d0be3303f"
+  },
+  {
+    "file": "GPL-2.0.txt",
+    "url": "https://www.gnu.org/licenses/old-licenses/gpl-2.0.txt",
+    "sha256": "edaef632cbb643e4e7a221717a6c441a4c1a7c918e6e4d56debc3d8739b233f6"
+  }
+]

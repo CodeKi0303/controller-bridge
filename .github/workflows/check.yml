@@ -1,0 +1,32 @@
+name: Check
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  android:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - uses: actions/setup-java@v5
+        with:
+          distribution: temurin
+          java-version: "17"
+      - uses: android-actions/setup-android@v3
+        with:
+          log-accepted-android-sdk-licenses: false
+      - name: Install pinned Android build packages
+        run: sdkmanager "platforms;android-35" "build-tools;35.0.0" "ndk;23.1.7779620"
+      - name: Test, lint and build
+        run: |
+          bash scripts/build-adb-host-test-library.sh
+          python3 scripts/adb-pairing-reference.py
+          bash ./gradlew --no-daemon --console=plain -PadbNativeTestDir="$PWD/.tools/adb-host-tests" testDebugUnitTest lintDebug assembleDebug
+      # Release signing keys and device logs are not used by this workflow.

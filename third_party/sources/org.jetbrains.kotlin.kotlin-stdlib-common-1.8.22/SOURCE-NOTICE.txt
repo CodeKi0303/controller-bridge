@@ -1,0 +1,6 @@
+Versioned sources/metadata for org.jetbrains.kotlin:kotlin-stdlib-common:1.8.22
+License: Apache-2.0
+Published POM: https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-stdlib-common/1.8.22/kotlin-stdlib-common-1.8.22.pom
+Source archive: https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-stdlib-common/1.8.22/kotlin-stdlib-common-1.8.22-sources.jar
+The source archive was expanded without modifying file content.
+Retained for Controller Bridge corresponding source. Gradle resolves the pinned published Maven artifact.

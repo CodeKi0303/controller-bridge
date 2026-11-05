@@ -1,0 +1,485 @@
+{
+  "acquiredAtUtc": "2026-11-04T04:15:08.594682+00:00",
+  "artifacts": [
+    {
+      "artifact": "dev.rikka.shizuku:api:13.1.5",
+      "license": "MIT",
+      "directory": "dev.rikka.shizuku.api-13.1.5",
+      "sourceUrl": "https://repo.maven.apache.org/maven2/dev/rikka/shizuku/api/13.1.5/api-13.1.5-sources.jar",
+      "archiveBytes": 14198,
+      "archiveSha256": "93b2f52a40beded05b6521bae3a423380fd1916b543af6be6ef9d292c1b9cebd",
+      "pomUrl": "https://repo.maven.apache.org/maven2/dev/rikka/shizuku/api/13.1.5/api-13.1.5.pom",
+      "pomSha256": "1e9d3b6f3a9b95580433f0486f3debb84c42f250e1fdc43a9fdcf121e14bd751",
+      "files": [
+        {
+          "path": "META-INF/MANIFEST.MF",
+          "bytes": 25,
+          "sha256": "566ad1a80220026d05099562645ce968ff0e7c36cde22634332605bb34cc3eff"
+        },
+        {
+          "path": "rikka/shizuku/Shizuku.java",
+          "bytes": 37104,
+          "sha256": "13d41b5b1dd988fe1972fe5de5dc7a43218aa8280d22c1970fb0bb99275f086f"
+        },
+        {
+          "path": "rikka/shizuku/ShizukuBinderWrapper.java",
+          "bytes": 2745,
+          "sha256": "f6cd45f9df8b700146dbc49b5fcea8de58654c8964610bc93bcbdb106634e2ed"
+        },
+        {
+          "path": "rikka/shizuku/ShizukuRemoteProcess.java",
+          "bytes": 4057,
+          "sha256": "79d26ab0da9e4f4b7906775b727499d2f4d2cfa1f0f0c30340df736662c0cc40"
+        },
+        {
+          "path": "rikka/shizuku/ShizukuServiceConnection.java",
+          "bytes": 2184,
+          "sha256": "3d5747be6071036806ef63db084ec6c4949a8ba408edb7ae84dc0a38cdbf3899"
+        },
+        {
+          "path": "rikka/shizuku/ShizukuServiceConnections.java",
+          "bytes": 1150,
+          "sha256": "1b0439c4a89a7d247f867b0278d6923668e5d3a701ae49ddeed8b64e5ea0f8d1"
+        },
+        {
+          "path": "rikka/shizuku/ShizukuSystemProperties.java",
+          "bytes": 1152,
+          "sha256": "2263939719d422ead03562db5856d74dcd63cdc0dc1b42670f5faf2c4dc79b46"
+        },
+        {
+          "path": "rikka/shizuku/SystemServiceHelper.java",
+          "bytes": 5105,
+          "sha256": "c0d37e3b14239bbf8462eb6a4fbe3e9fd9d2468e6ab8e44d424fcdaebd320c47"
+        },
+        {
+          "path": "rikka/sui/Sui.java",
+          "bytes": 1942,
+          "sha256": "5ff48a79aed50e9e539c3f2432a429100e9a66d6b3eedd8a9b5df5d581c025d7"
+        }
+      ]
+    },
+    {
+      "artifact": "dev.rikka.shizuku:provider:13.1.5",
+      "license": "MIT",
+      "directory": "dev.rikka.shizuku.provider-13.1.5",
+      "sourceUrl": "https://repo.maven.apache.org/maven2/dev/rikka/shizuku/provider/13.1.5/provider-13.1.5-sources.jar",
+      "archiveBytes": 3966,
+      "archiveSha256": "b970c8e3d1354729bbb59f46313180f2bf475a5a619045c6b25a91d8bb7b9d12",
+      "pomUrl": "https://repo.maven.apache.org/maven2/dev/rikka/shizuku/provider/13.1.5/provider-13.1.5.pom",
+      "pomSha256": "3413e9812ea3c3842212aa6eb04b8a785dfc25a2e114a972a0cead1ca003cd46",
+      "files": [
+        {
+          "path": "META-INF/MANIFEST.MF",
+          "bytes": 25,
+          "sha256": "566ad1a80220026d05099562645ce968ff0e7c36cde22634332605bb34cc3eff"
+        },
+        {
+          "path": "moe/shizuku/api/BinderContainer.java",
+          "bytes": 1085,
+          "sha256": "b362f072f3e15bfe8be3082127841ba340a9693fa8f0bbe517211416684c5dbc"
+        },
+        {
+          "path": "rikka/shizuku/ShizukuProvider.java",
+          "bytes": 9301,
+          "sha256": "0b4a6a272780b5fbc88c0c88951806ed1b5784e0d617ec55f7ab254d29a030a9"
+        }
+      ]
+    },
+    {
+      "artifact": "dev.rikka.shizuku:aidl:13.1.5",
+      "license": "MIT",
+      "directory": "dev.rikka.shizuku.aidl-13.1.5",
+      "sourceUrl": "https://repo.maven.apache.org/maven2/dev/rikka/shizuku/aidl/13.1.5/aidl-13.1.5-sources.jar",
+      "archiveBytes": 9104,
+      "archiveSha256": "2c5207da142aa9aa464d1630559f1c7ddbc896fdb84a22efa8d09fa0d47f18a2",
+      "pomUrl": "https://repo.maven.apache.org/maven2/dev/rikka/shizuku/aidl/13.1.5/aidl-13.1.5.pom",
+      "pomSha256": "068afe284102d3629562e6807423f6d1c8a4eb3dfa62fe241c7163633daaef3a",
+      "files": [
+        {
+          "path": "META-INF/MANIFEST.MF",
+          "bytes": 25,
+          "sha256": "566ad1a80220026d05099562645ce968ff0e7c36cde22634332605bb34cc3eff"
+        },
+        {
+          "path": "moe/shizuku/server/IRemoteProcess.java",
+          "bytes": 14320,
+          "sha256": "e1aa7652489beb0e7470762fe2d58b0812c4bc59a4abeb76cbe3d2f96db3c00f"
+        },
+        {
+          "path": "moe/shizuku/server/IShizukuApplication.java",
+          "bytes": 8163,
+          "sha256": "cd8c01e15af7422f92b5dc018b0f647ac2852a40bc49eb0f94c029acf5dc1954"
+        },
+        {
+          "path": "moe/shizuku/server/IShizukuService.java",
+          "bytes": 34318,
+          "sha256": "d5f888d868abfab1fbf0cb5b61a3077443c68cf37bbf1f63ab50d3cba92d4a73"
+        },
+        {
+          "path": "moe/shizuku/server/IShizukuServiceConnection.java",
+          "bytes": 5137,
+          "sha256": "d1e587845b14904b1c4a1a395dee2497962579f82824498151245100f3d2e57d"
+        }
+      ]
+    },
+    {
+      "artifact": "dev.rikka.shizuku:shared:13.1.5",
+      "license": "MIT",
+      "directory": "dev.rikka.shizuku.shared-13.1.5",
+      "sourceUrl": "https://repo.maven.apache.org/maven2/dev/rikka/shizuku/shared/13.1.5/shared-13.1.5-sources.jar",
+      "archiveBytes": 1806,
+      "archiveSha256": "5b062211624678129fd332fc2e5a1cb228f441b49c3c5aef96b72f2352c7f9f9",
+      "pomUrl": "https://repo.maven.apache.org/maven2/dev/rikka/shizuku/shared/13.1.5/shared-13.1.5.pom",
+      "pomSha256": "90a416caf523964cec3e533c0f2e9a96ecd5edc0f66888758fd80c285a2f1f7e",
+      "files": [
+        {
+          "path": "META-INF/MANIFEST.MF",
+          "bytes": 25,
+          "sha256": "566ad1a80220026d05099562645ce968ff0e7c36cde22634332605bb34cc3eff"
+        },
+        {
+          "path": "rikka/shizuku/ShizukuApiConstants.java",
+          "bytes": 2759,
+          "sha256": "fb49d1e9315d82f2ced783fb4020be89869bd1d562de070ed109d186cfb3ce7d"
+        },
+        {
+          "path": "rikka/shizuku/shared/BuildConfig.java",
+          "bytes": 295,
+          "sha256": "7573017f3c9c3cfd19563c5b9a44fb320f3210991e447007d0b96e7e234709d5"
+        }
+      ]
+    },
+    {
+      "artifact": "androidx.annotation:annotation:1.3.0",
+      "license": "Apache-2.0",
+      "directory": "androidx.annotation.annotation-1.3.0",
+      "sourceUrl": "https://dl.google.com/dl/android/maven2/androidx/annotation/annotation/1.3.0/annotation-1.3.0-sources.jar",
+      "archiveBytes": 59743,
+      "archiveSha256": "f3f818e76da236bb419bf90bdf86be49349f0f601a13cc2e735c00504f7f6090",
+      "pomUrl": "https://dl.google.com/dl/android/maven2/androidx/annotation/annotation/1.3.0/annotation-1.3.0.pom",
+      "pomSha256": "049517c5256a4bbc8529fcdc90c4eaaf358180ac205c91660767df26465efbb0",
+      "files": [
+        {
+          "path": "META-INF/MANIFEST.MF",
+          "bytes": 25,
+          "sha256": "566ad1a80220026d05099562645ce968ff0e7c36cde22634332605bb34cc3eff"
+        },
+        {
+          "path": "META-INF/proguard/androidx-annotations.pro",
+          "bytes": 433,
+          "sha256": "64fb2b6036d3bfab479f615c38c29dfce48071cc357b2d062a71020d645e5c9d"
+        },
+        {
+          "path": "androidx/annotation/AnimRes.java",
+          "bytes": 1329,
+          "sha256": "fc4e7c9961b39ee25a851d86d9e7f79cfe38fd39e93ac3e13ef87fb1ae4573c3"
+        },
+        {
+          "path": "androidx/annotation/AnimatorRes.java",
+          "bytes": 1341,
+          "sha256": "af997bd9653e0c0f60c34e46119b0a814c77e2d209ad647ef15de8f8f9603b52"
+        },
+        {
+          "path": "androidx/annotation/AnyRes.java",
+          "bytes": 1433,
+          "sha256": "a7087405f1e6ee6f5e04561fb25aee037236e64356068bad740ba4bd5789c981"
+        },
+        {
+          "path": "androidx/annotation/AnyThread.java",
+          "bytes": 1728,
+          "sha256": "3beb9a7848742b7953b8085f412346cf2fa644f40ca7ade550985ed6e3d17b92"
+        },
+        {
+          "path": "androidx/annotation/ArrayRes.java",
+          "bytes": 1335,
+          "sha256": "dfc3e56929acb6c6c701d56baa26faa77cca86786a5097e327a1e6ced942bfd2"
+        },
+        {
+          "path": "androidx/annotation/AttrRes.java",
+          "bytes": 1324,
+          "sha256": "56a1d5b4d6ce58d2b48c451124ab7d5b7d4187806d6419d2dc2f4a10a81e0cc3"
+        },
+        {
+          "path": "androidx/annotation/BinderThread.java",
+          "bytes": 1493,
+          "sha256": "688ae30fca92ed692078b217f2db0e15140bb5ead515fdf31bfcf5ffe9acc19f"
+        },
+        {
+          "path": "androidx/annotation/BoolRes.java",
+          "bytes": 1293,
+          "sha256": "998716bd985c563df4453415e15010ac86d51d3d8eb2ef309adbd547d121ee87"
+        },
+        {
+          "path": "androidx/annotation/CallSuper.java",
+          "bytes": 1152,
+          "sha256": "0fac85c52860e582060584fde79b21ad59d95450ba519744bf9e7c5fb502bf32"
+        },
+        {
+          "path": "androidx/annotation/CheckResult.java",
+          "bytes": 2261,
+          "sha256": "2fc64a07d0ab4fa4238cd702e92664eb9f186de713de7c29b71325fd91aeab10"
+        },
+        {
+          "path": "androidx/annotation/ChecksSdkIntAtLeast.java",
+          "bytes": 3193,
+          "sha256": "6025eb15fda41081622205fc76b46435974867361c0da399e51388496272eb93"
+        },
+        {
+          "path": "androidx/annotation/ColorInt.java",
+          "bytes": 1457,
+          "sha256": "d67e3904712824e0fa148d9060059a4a31c580bfe73e98bca40f579b795afb3e"
+        },
+        {
+          "path": "androidx/annotation/ColorLong.java",
+          "bytes": 1623,
+          "sha256": "4ceda0647e49f7c2b15431735d9790df5f46c2191822bb3e4430efd9628b4005"
+        },
+        {
+          "path": "androidx/annotation/ColorRes.java",
+          "bytes": 1329,
+          "sha256": "41a327d0540ede3692e3ce782d92ca06a34d0af0460a0b3f6467600d6b413286"
+        },
+        {
+          "path": "androidx/annotation/ContentView.java",
+          "bytes": 1565,
+          "sha256": "f36fae769433a8041e8119d87262851e7edd54f8eeadf6a8f30bcb89c6a5bc64"
+        },
+        {
+          "path": "androidx/annotation/DimenRes.java",
+          "bytes": 1341,
+          "sha256": "a6dfe9f377cb3fcdb0b9e1aaf5750e7ae40cfebc22e14ff38c74cd26bec7ce6f"
+        },
+        {
+          "path": "androidx/annotation/Dimension.java",
+          "bytes": 1462,
+          "sha256": "c94734f82dc0dfcd2fc258e3faffcfb9adde760fcb31c3d6915ffed18cef6b85"
+        },
+        {
+          "path": "androidx/annotation/DimensionUnit.java",
+          "bytes": 1112,
+          "sha256": "a7e5e029935bb1bdeec8193126347deb0eee1022e2806129d1146387502bb598"
+        },
+        {
+          "path": "androidx/annotation/Discouraged.java",
+          "bytes": 1770,
+          "sha256": "ecb8607417d20fda8abc5217af2f0cb939ab59ea35d260ca1fa940ed43e284c5"
+        },
+        {
+          "path": "androidx/annotation/DisplayContext.java",
+          "bytes": 2368,
+          "sha256": "a45240466c40ec822cb585f05e77dfe952774f5528cee84f46debf8099427945"
+        },
+        {
+          "path": "androidx/annotation/DoNotInline.java",
+          "bytes": 1258,
+          "sha256": "a274c908543a8f4d0b7aa0d4933c393ac30aef5924aeedac6b01764baf05ef00"
+        },
+        {
+          "path": "androidx/annotation/DrawableRes.java",
+          "bytes": 1344,
+          "sha256": "7220eba84951b34875d0724a7264209a05ce511e9fc9b20c672257931135df18"
+        },
+        {
+          "path": "androidx/annotation/FloatRange.java",
+          "bytes": 2014,
+          "sha256": "c3671368a94059ee71472b271bae6d7162fcea8f47d3bf7d1b73fec46df36a56"
+        },
+        {
+          "path": "androidx/annotation/FontRes.java",
+          "bytes": 1319,
+          "sha256": "5753da374e66ca206d44c6ef5ac92f85ab550dc74b83449c2b8e0b0b758be8b7"
+        },
+        {
+          "path": "androidx/annotation/FractionRes.java",
+          "bytes": 1298,
+          "sha256": "c382498dc17af7d4632bd560c3cc92adf01c996180d6b31a1eb0e20202f7bf32"
+        },
+        {
+          "path": "androidx/annotation/GravityInt.java",
+          "bytes": 1474,
+          "sha256": "ebadec508e56384d6843552b6e0a4521381f4b9c6cda631a5b7e8168197a8fde"
+        },
+        {
+          "path": "androidx/annotation/GuardedBy.java",
+          "bytes": 1385,
+          "sha256": "5c2b7be958b02ac2e99fdfc1dd851fac7397d4b5a93ae2dc2f967233c96ee502"
+        },
+        {
+          "path": "androidx/annotation/HalfFloat.java",
+          "bytes": 1639,
+          "sha256": "93348f0e1b46236d1763609d25c58ffd775e66e33df0d9002b803b08b7be0157"
+        },
+        {
+          "path": "androidx/annotation/IdRes.java",
+          "bytes": 1320,
+          "sha256": "8dd82992c7481ab4f82e89c001f73e9c7de1963c271d8fee7ea6a50cca165ec3"
+        },
+        {
+          "path": "androidx/annotation/InspectableProperty.java",
+          "bytes": 5971,
+          "sha256": "02b9aa345ee99e87253475cd06e9fe8fc8974d57fc4b1d9118d05deda7e94378"
+        },
+        {
+          "path": "androidx/annotation/IntDef.java",
+          "bytes": 2496,
+          "sha256": "dc5e77955f90c9f55dab76c109f53e9d4b69666af8e83fb54c43affb7958956d"
+        },
+        {
+          "path": "androidx/annotation/IntRange.java",
+          "bytes": 1621,
+          "sha256": "89399797451e1834c55333986b25238d0def667d4cb2907bb52138aba3d26d3c"
+        },
+        {
+          "path": "androidx/annotation/IntegerRes.java",
+          "bytes": 1351,
+          "sha256": "0fbabe2cae8c082fd71a33cd7e99a75472bf907f413ad1b1bc5dff2dab8d7677"
+        },
+        {
+          "path": "androidx/annotation/InterpolatorRes.java",
+          "bytes": 1351,
+          "sha256": "d515101900163be980ed130d87de93f91a8a60386c3d916d6d055e7bc99abe24"
+        },
+        {
+          "path": "androidx/annotation/Keep.java",
+          "bytes": 1600,
+          "sha256": "a6a598a9e760e2f9545301b393efc0f746753a43206ac987367e17343c0224b4"
+        },
+        {
+          "path": "androidx/annotation/LayoutRes.java",
+          "bytes": 1339,
+          "sha256": "6487ab733eda0d416b66b3da54d24aaa2cd2c202c3c4e486edd8eaf1e986cdea"
+        },
+        {
+          "path": "androidx/annotation/LongDef.java",
+          "bytes": 2493,
+          "sha256": "17639516ec4a0fd20f3d7cc3b7f8ebe74bed0e19ec0955657c07097512b9142f"
+        },
+        {
+          "path": "androidx/annotation/MainThread.java",
+          "bytes": 1816,
+          "sha256": "0c3b0ffe30ba3f9db16f04d6e82c75b500a9559b18eba26cb5e6ba8277af3f25"
+        },
+        {
+          "path": "androidx/annotation/MenuRes.java",
+          "bytes": 1290,
+          "sha256": "f35c656447da7141cdcd4197f1ebdee2260d07c068b043d7851b443df9f93551"
+        },
+        {
+          "path": "androidx/annotation/NavigationRes.java",
+          "bytes": 1335,
+          "sha256": "139feb94581eb02fc76d9456876e18c8dc3095c87422be1e2573e7dc2472dc74"
+        },
+        {
+          "path": "androidx/annotation/NonNull.java",
+          "bytes": 1471,
+          "sha256": "303cc016b02a6c7729b57fda63d892698e7aa2fee17d572e96344692d05859ac"
+        },
+        {
+          "path": "androidx/annotation/NonUiContext.java",
+          "bytes": 1780,
+          "sha256": "220dd5c53400d411af013db49e27c9537df2b744d9b8fec3b7d204d8ad818f37"
+        },
+        {
+          "path": "androidx/annotation/Nullable.java",
+          "bytes": 1759,
+          "sha256": "9ab20fbcbdd6a818f7d437ef0a1edd60e56481fc35b101ddd88992a67e502fc4"
+        },
+        {
+          "path": "androidx/annotation/PluralsRes.java",
+          "bytes": 1296,
+          "sha256": "149db5b79233eb005795d4a9076d29a90bd441a9fad0f50c4b2dd69f08ba4852"
+        },
+        {
+          "path": "androidx/annotation/ProductionVisibility.java",
+          "bytes": 1209,
+          "sha256": "ffd2bad7fc5b1ed2c4bcbf817f4c432fcf9aaaa1d0806f72a88e7843731b3904"
+        },
+        {
+          "path": "androidx/annotation/Px.java",
+          "bytes": 1316,
+          "sha256": "dd1433e1841c412f56f59ae9dee21d6e52d1ef2e60c76e716cac7a280f05af6d"
+        },
+        {
+          "path": "androidx/annotation/RawRes.java",
+          "bytes": 1288,
+          "sha256": "9f634c19462d42e152074e1fc602452ee57851187b51e033885e7b174cd6277f"
+        },
+        {
+          "path": "androidx/annotation/RequiresApi.java",
+          "bytes": 1849,
+          "sha256": "0eda4fc8e23d44fbc6e22de1c33d5c1d70260d65cda70b58a2e559496a41727a"
+        },
+        {
+          "path": "androidx/annotation/RequiresFeature.java",
+          "bytes": 1943,
+          "sha256": "824631186d9d76dcefcd747ce5c87b4a83e513efaaea4f751aa88e021a76b139"
+        },
+        {
+          "path": "androidx/annotation/RequiresPermission.java",
+          "bytes": 5578,
+          "sha256": "b46e67385d526ef7df043d5ee7f97afbae1be36448e56b5f74a320ca13bb9bc3"
+        },
+        {
+          "path": "androidx/annotation/RestrictTo.java",
+          "bytes": 3640,
+          "sha256": "e54beb561c77f3cd1c062e1a137dd186d6f35fd392c883105edd33b216afeae0"
+        },
+        {
+          "path": "androidx/annotation/Size.java",
+          "bytes": 1885,
+          "sha256": "4b08a389a67d9478caf2168db0eb82db9afa38d0650604307505f367568842c8"
+        },
+        {
+          "path": "androidx/annotation/StringDef.java",
+          "bytes": 2025,
+          "sha256": "b3c55bf6752226fe04e9cbd4762577f3d043bb97699c0c30790a6c07ad37d79d"
+        },
+        {
+          "path": "androidx/annotation/StringRes.java",
+          "bytes": 1329,
+          "sha256": "6caf1b3766d41f8f382ff3a0712e1fa878f7016c2dba02e6fcb106eb33a5f653"
+        },
+        {
+          "path": "androidx/annotation/StyleRes.java",
+          "bytes": 1338,
+          "sha256": "ea0bae695cae834d184b2ebdde35870c60aa3f1bd8aa0141855b2e7c0c5c64ae"
+        },
+        {
+          "path": "androidx/annotation/StyleableRes.java",
+          "bytes": 1349,
+          "sha256": "2851d89160e9e358ece2d5d08a6a22548feb3ed7bf22dfe66114dd2a45fbf58d"
+        },
+        {
+          "path": "androidx/annotation/TransitionRes.java",
+          "bytes": 1225,
+          "sha256": "a990cb2981202492b31ac788944e64bd79bf91926f2b0816c53309cadb07a64f"
+        },
+        {
+          "path": "androidx/annotation/UiContext.java",
+          "bytes": 2478,
+          "sha256": "9293eeb72e0b5fe4393e4b6cfb4b7688558c160abac24ffed1deeaff9944725b"
+        },
+        {
+          "path": "androidx/annotation/UiThread.java",
+          "bytes": 1845,
+          "sha256": "a7e8b12717b8f78bd738e9501713dcf6e212cecc5a6f2e77ccb6cfe2cdd5f680"
+        },
+        {
+          "path": "androidx/annotation/VisibleForTesting.java",
+          "bytes": 2192,
+          "sha256": "2a4148666093b125ee90de97383b7f94b7bd5f0caa8e083baa3b7394617bc997"
+        },
+        {
+          "path": "androidx/annotation/WorkerThread.java",
+          "bytes": 1514,
+          "sha256": "c6ce67b100ed20c12f19bc639928e652c42c2fd0484bd8f157372f5eeefa5040"
+        },
+        {
+          "path": "androidx/annotation/XmlRes.java",
+          "bytes": 1289,
+          "sha256": "91b1213db924e021795dcf7b39496411504c5c3d68d35b05b1e547098893e7cb"
+        }
+      ]
+    }
+  ]
+}

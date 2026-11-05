@@ -1,0 +1,72 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'dev.codek.xboxprobe'
+    compileSdk 35
+    buildToolsVersion '35.0.0'
+    ndkVersion '23.1.7779620'
+    if (providers.gradleProperty('bridgeNdkPath').isPresent()) {
+        ndkPath providers.gradleProperty('bridgeNdkPath').get()
+    }
+
+    defaultConfig {
+        applicationId 'dev.codek.xboxprobe'
+        minSdk 30
+        targetSdk 35
+        versionCode 19
+        versionName '0.11.1'
+    }
+
+    buildFeatures {
+        aidl true
+        buildConfig true
+    }
+
+    externalNativeBuild {
+        ndkBuild { path file('src/main/cpp/Android.mk') }
+    }
+    packaging {
+        jniLibs { useLegacyPackaging = true }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+
+    buildTypes {
+        debug {
+            minifyEnabled false
+        }
+        release {
+            minifyEnabled false
+        }
+    }
+
+    lint {
+        abortOnError true
+    }
+
+    testOptions {
+        unitTests.all {
+            if (project.providers.gradleProperty('adbNativeTestDir').isPresent()) {
+                jvmArgs '-Djava.library.path=' + project.file(project.providers.gradleProperty('adbNativeTestDir').get()).absolutePath
+                systemProperty 'bridge.nativeTests', 'true'
+            }
+        }
+    }
+}
+
+dependencies {
+    // Shizuku exposes these annotations but declares them runtime-only.
+    compileOnly 'androidx.annotation:annotation:1.3.0'
+    implementation 'dev.rikka.shizuku:api:13.1.5'
+    implementation 'dev.rikka.shizuku:provider:13.1.5'
+    implementation 'org.conscrypt:conscrypt-android:2.8.0'
+    implementation 'androidx.window:window-java:1.3.0'
+    // WindowManager's Java callback API exposes androidx.core.util.Consumer.
+    implementation 'androidx.core:core:1.8.0'
+    testImplementation 'junit:junit:4.13.2'
+}

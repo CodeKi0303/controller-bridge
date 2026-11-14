@@ -126,6 +126,33 @@ public final class ProfileStoreTest {
         assertEquals(4,store.listProfiles().size());assertEquals(original,store.resetBuiltin(original.getId()));assertTrue(store.getBackupJson().contains("Custom Pad"));
     }
 
+    @Test public void xboxPresetCapturesSourceExclusivelyByDefaultAndUpgradesExistingCatalogOnce() {
+        ProfileStore fresh=fresh();
+        assertTrue(fresh.getProfile(ProfileStore.XBOX_ID).isSourceExclusive());assertTrue(ProfileStore.builtinDefault(ProfileStore.XBOX_ID).isSourceExclusive());
+        for(String id:new String[]{ProfileStore.PS4_ID,ProfileStore.PS5_ID,ProfileStore.KISHI_ID})assertFalse(fresh.getProfile(id).isSourceExclusive());
+
+        // A catalog written before the default changed: current version, no marker.
+        MemoryPreferences data=new MemoryPreferences();ProfileStore store=new ProfileStore(data,new MemoryPreferences());
+        ControllerProfile xbox=store.getProfile(ProfileStore.XBOX_ID);
+        ControllerProfile shared=new ControllerProfile(xbox.getId(),xbox.getLabel(),xbox.getKind(),"Edited Xbox",7,8,5,Map.of(304,305),Map.of(),xbox.getAxes(),xbox.getSourceBindings(),false);
+        store.saveProfile(shared);data.values.remove(ProfileStore.XBOX_EXCLUSIVE_DEFAULT_KEY);
+        String before=data.getString(ProfileStore.DOCUMENT_KEY,null);int commits=data.commits;
+        ControllerProfile upgraded=new ProfileStore(data,new MemoryPreferences()).getProfile(ProfileStore.XBOX_ID);
+        assertTrue(upgraded.isSourceExclusive());assertEquals(shared.getIdentity(),upgraded.getIdentity());assertEquals(shared.getButtonMappings(),upgraded.getButtonMappings());
+        assertEquals(commits+1,data.commits);assertEquals(before,data.getString(ProfileStore.BACKUP_KEY,null));
+        for(String id:new String[]{ProfileStore.PS4_ID,ProfileStore.PS5_ID,ProfileStore.KISHI_ID})assertFalse(store.getProfile(id).isSourceExclusive());
+
+        // The upgrade runs once: an explicit opt-out afterwards is retained.
+        store.saveProfile(shared);int afterOptOut=data.commits;
+        assertFalse(new ProfileStore(data,new MemoryPreferences()).getProfile(ProfileStore.XBOX_ID).isSourceExclusive());assertEquals(afterOptOut,data.commits);
+        assertTrue(store.resetBuiltin(ProfileStore.XBOX_ID).isSourceExclusive());
+
+        // A failed upgrade write is reported, never silently treated as applied.
+        MemoryPreferences failing=new MemoryPreferences();new ProfileStore(failing,new MemoryPreferences()).saveProfile(shared);
+        failing.values.remove(ProfileStore.XBOX_EXCLUSIVE_DEFAULT_KEY);failing.failCommit=true;
+        assertThrows(IllegalStateException.class,()->new ProfileStore(failing,new MemoryPreferences()).snapshot());
+    }
+
     @Test public void assignmentsPinsAndAutoAttachPreserveExplicitOmissionAndDefaultChoice() {
         ProfileStore store=fresh();assertTrue(store.isAutoAttachEnabled());assertNull(store.getAssignedProfileId("example.game"));
         assertEquals(ProfileStore.KISHI_ID,store.resolveProfileForGame("example.game").getId());

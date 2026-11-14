@@ -33,6 +33,9 @@ public final class ProfileStore {
     static final String LEGACY_BACKUP_KEY = "legacy_keyboard_backup_v1";
     static final String CATALOG_BACKUP_KEY = "four_profile_catalog_backup_v1";
     static final String CATALOG_VERSION_KEY = "profile_catalog_version";
+    // Set once the Xbox preset has been switched to exclusive source input;
+    // a later explicit opt-out in the editor is then retained.
+    static final String XBOX_EXCLUSIVE_DEFAULT_KEY = "xbox_source_exclusive_default_applied";
     private static final int CATALOG_VERSION = 1;
     private static final String[] BUILTIN_IDS = {
             PS4_ID,PS5_ID,XBOX_ID,KISHI_ID
@@ -92,7 +95,10 @@ public final class ProfileStore {
                     Collections.emptyMap(),Collections.emptyMap(),ControllerProfile.AxisConfig.DEFAULT);
             case PS5_ID:return new ControllerProfile(id,"PS5",ControllerProfile.Kind.NATIVE,"Wireless Controller",0x054c,0x0ce6,6,
                     Collections.emptyMap(),Collections.emptyMap(),ControllerProfile.AxisConfig.DEFAULT);
-            case XBOX_ID:return copyProfile(legacyBuiltinDefault(id),id,"Xbox",Collections.emptyMap());
+            // Xbox pads report triggers as axes only. A source that also sends
+            // BTN_TL2/BTN_TR2 must not reach the app next to the virtual pad, or
+            // games that apply an Xbox layout flip between touch and controller input.
+            case XBOX_ID:return sourceExclusive(copyProfile(legacyBuiltinDefault(id),id,"Xbox",Collections.emptyMap()));
             case KISHI_ID:return copyProfile(legacyBuiltinDefault(id),id,"Kishi Ultra",Collections.emptyMap());
             default:throw new IllegalArgumentException("Not an active built-in profile: "+id);
         }
@@ -160,7 +166,8 @@ public final class ProfileStore {
         if(catalogVersion!=0&&catalogVersion!=CATALOG_VERSION)throw new IllegalStateException("Unsupported profile catalog version: "+catalogVersion);
         if(catalogVersion==CATALOG_VERSION){
             if(raw==null)throw new IllegalStateException("The active profile catalog document is missing");
-            ProfileCodec.StoreDocument current=ProfileCodec.decodeStore(raw);validateActiveCatalog(current);return current;
+            ProfileCodec.StoreDocument current=ProfileCodec.decodeStore(raw);validateActiveCatalog(current);
+            return preferences.getBoolean(XBOX_EXCLUSIVE_DEFAULT_KEY,false)?current:applyXboxExclusiveDefault(current,raw);
         }
         ProfileCodec.StoreDocument document;
         String legacyBackup=null;
@@ -200,7 +207,8 @@ public final class ProfileStore {
             if(retained==null)profiles.add(builtinDefault(id));
             else{
                 String label=retained.getLabel().equals(legacyBuiltinDefault(id).getLabel())?builtinDefault(id).getLabel():retained.getLabel();
-                profiles.add(copyProfile(retained,id,label,retained.getKeyboardBindings()));
+                ControllerProfile kept=copyProfile(retained,id,label,retained.getKeyboardBindings());
+                profiles.add(XBOX_ID.equals(id)?sourceExclusive(kept):kept);
             }
         }
         Map<String,String> games=new LinkedHashMap<>();
@@ -229,10 +237,28 @@ public final class ProfileStore {
         if(migrateCatalog){
             if(previous!=null&&!preferences.contains(CATALOG_BACKUP_KEY))edit.putString(CATALOG_BACKUP_KEY,previous);
             edit.putInt(CATALOG_VERSION_KEY,CATALOG_VERSION);
+            edit.putBoolean(XBOX_EXCLUSIVE_DEFAULT_KEY,true);
         }
         if(legacyBackup!=null&&!preferences.contains(LEGACY_BACKUP_KEY))edit.putString(LEGACY_BACKUP_KEY,legacyBackup);
         edit.putString(DOCUMENT_KEY,encoded);
         if(!edit.commit())throw new IllegalStateException("Profile settings persistence is unresolved; reopen settings to verify");
+    }
+
+    /** One-time upgrade of an existing catalog; the preceding document stays in the rolling backup. */
+    private ProfileCodec.StoreDocument applyXboxExclusiveDefault(ProfileCodec.StoreDocument current,String raw) {
+        List<ControllerProfile> profiles=new ArrayList<>(current.profiles);int index=indexOf(profiles,XBOX_ID);
+        profiles.set(index,sourceExclusive(profiles.get(index)));
+        ProfileCodec.StoreDocument updated=copy(current,profiles,current.gameAssignments,current.defaultProfileId,current.autoAttachEnabled,current.pinnedGames);
+        String encoded=ProfileCodec.encodeStore(updated);
+        SharedPreferences.Editor edit=preferences.edit();
+        if(!encoded.equals(raw)){edit.putString(BACKUP_KEY,raw);edit.putString(DOCUMENT_KEY,encoded);}
+        edit.putBoolean(XBOX_EXCLUSIVE_DEFAULT_KEY,true);
+        if(!edit.commit())throw new IllegalStateException("Profile settings persistence is unresolved; reopen settings to verify");
+        return updated;
+    }
+    private static ControllerProfile sourceExclusive(ControllerProfile p) {
+        return p.isSourceExclusive()?p:new ControllerProfile(p.getId(),p.getLabel(),p.getKind(),p.getDeviceName(),p.getVendorId(),p.getProductId(),p.getBus(),
+                p.getButtonMappings(),p.getKeyboardBindings(),p.getAxes(),p.getSourceBindings(),true);
     }
 
     private static ProfileCodec.StoreDocument copy(ProfileCodec.StoreDocument old,List<ControllerProfile> profiles,
